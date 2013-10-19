@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo: "Back To TOP" Scroll Function</title>
+	<meta name="author" content="Tahmid" />
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+
+<script>
+jQuery(document).ready(function() {
+    var offset = 300;
+    var duration = 1100;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('#back-top').fadeIn(duration);
+        } else {
+            jQuery('#back-top').fadeOut(duration);
+        }
+    });
+    
+    jQuery('#back-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
+
+	<style>
+		body{
+			background: #F5F5F5;
+			padding: 50px;
+		}
+		h1 {			
+			font-size: 25px;
+			margin-top: 40px;
+			margin-bottom: 10px;
+		}
+		h2{
+			margin-top: 40px;
+		}
+		a{
+			text-decoration: none;
+			color: #79BD9A;
+		}
+
+		a:hover{
+			color: #949494;
+			transition: .5s;
+		}
+
+		header a{
+			position: fixed;
+			top:0;
+			left:0;
+			background: #F67676;
+			padding:10px 10px 10px 15px;
+			color: white;
+		}
+
+		header a:hover{
+			color: white;
+			background: #6DB48F;
+			transition: .5s;
+		}
+
+		#warp{
+			width: 700px;
+			height: auto;
+			margin: 0px auto;
+			font-family: 'Libre Baskerville', serif;
+			color: #777777;
+		}
+		#back-top{
+			position: fixed;
+			right: 40px;
+			bottom: 40px;
+			width: 150px;
+			height: 40px;
+			display: none;
+		}
+		#back-top a{
+			font-weight: bold;
+			font-size: 11px;
+			padding: 10px;			
+			color: white;
+			background-color: #777777;
+		}
+		#back-top a:hover {
+			background: #f67676;
+			transition: .5s;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<a href="http://stupidcodez.com/back-top-button-smooth-scroll-using-jquery/"><strong>Back to Tutorial</strong></a>
+	</header>
+
+	<div id="warp">
+		<h1><center><a href="http://stupidcodez.com/back-top-button-smooth-scroll-using-jquery/">Demo: “Back To Top” Button With Smooth Scroll</a></center></h1>
+		<center><em>By</em> <b><a href="http://stupidcodez.com">Stupid Codez</a></b></center>
+		<br><br>
+		<h2>Amrao Pari! Shudo Opekka Koro.</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean adipiscing aliquam arcu, nec faucibus urna. Ut iaculis suscipit dolor, eu commodo est consectetur id. Integer sed consectetur dui. Etiam ut augue imperdiet, rutrum nulla a, gravida ipsum. Cras sagittis, quam vitae pharetra feugiat, ipsum sem gravida augue, a sollicitudin dui lectus vitae neque. Proin ornare libero eget odio consequat mattis. Sed porttitor, nulla ullamcorper dictum tristique, justo odio tempor erat, id vehicula velit nunc et orci. Maecenas venenatis augue eget commodo commodo. Nunc vulputate, diam sit amet ultricies sollicitudin, ligula nibh consequat tellus, vel congue augue sapien et dui. Duis accumsan lacus sit amet elementum dignissim. Pellentesque dignissim adipiscing ipsum sit amet dictum. Nulla id quam nisl. Sed tellus enim, euismod sit amet nisl porta, fringilla pulvinar augue. In suscipit semper purus sit amet sodales. 
+		</p>
+		<p>
+			Maecenas venenatis augue eget commodo commodo. Nunc vulputate, diam sit amet ultricies sollicitudin, ligula nibh consequat tellus, vel congue augue sapien et dui. Duis accumsan lacus sit amet elementum dignissim. Pellentesque dignissim adipiscing ipsum sit amet dictum. Nulla id quam nisl. Sed tellus enim, euismod sit amet nisl porta, fringilla pulvinar augue. In suscipit semper purus sit amet sodales. 
+		</p>
+
+		<h2>Amrao ekdin tumader topke jabo</h2>
+		<p>
+			Sed luctus euismod eros a fermentum. Vivamus posuere nisi et arcu dapibus, ac adipiscing metus interdum. Aliquam convallis augue ipsum, vel condimentum eros sodales nec. Donec et dui sollicitudin, mattis sem vitae, luctus orci. Vestibulum diam lectus, hendrerit eget pharetra ut, accumsan sed lectus. Vestibulum tellus sem, posuere eget tempus ut, tempus vitae erat. Nullam feugiat elementum bibendum. 
+		</p>
+		<p>
+			In tincidunt gravida eleifend. Suspendisse placerat quis orci id vulputate. Sed elementum sed dui eget tempus. Proin accumsan lacus id tellus viverra tincidunt. Nullam ac diam sed magna tempor convallis eu a elit. Sed turpis ligula, vulputate quis tristique at, consequat non risus. Vivamus semper adipiscing arcu a dapibus. Pellentesque sit amet dui nunc. Nulla lorem massa, imperdiet vitae laoreet vitae, rhoncus ut nulla. Praesent nisl sapien, luctus ac erat a, mattis accumsan metus. Nulla bibendum, felis a venenatis tincidunt, leo nunc dictum metus, quis aliquam quam sem a velit. Donec vestibulum tincidunt magna, eu elementum est sodales eget. Sed imperdiet elit vel massa aliquet tincidunt ut sit amet sem. 
+		</p>
+		<h2><a href="http://html-ipsum.com/">HTML Ipsum Presents</a></h2>
+	       
+		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+		<h2>Header Level 2</h2>
+			       
+		<ol>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		</ol>
+
+		<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
+
+		<h3>Header Level 3</h3>
+
+		<ul>
+		   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+		   <li>Aliquam tincidunt mauris eu risus.</li>
+		</ul>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+		<h2>Amrao Pari! Shudo opekka koro.</h2>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean adipiscing aliquam arcu, nec faucibus urna. Ut iaculis suscipit dolor, eu commodo est consectetur id. Integer sed consectetur dui. Etiam ut augue imperdiet, rutrum nulla a, gravida ipsum. Cras sagittis, quam vitae pharetra feugiat, ipsum sem gravida augue, a sollicitudin dui lectus vitae neque. Proin ornare libero eget odio consequat mattis. Sed porttitor, nulla ullamcorper dictum tristique, justo odio tempor erat, id vehicula velit nunc et orci. Maecenas venenatis augue eget commodo commodo. Nunc vulputate, diam sit amet ultricies sollicitudin, ligula nibh consequat tellus, vel congue augue sapien et dui. Duis accumsan lacus sit amet elementum dignissim. Pellentesque dignissim adipiscing ipsum sit amet dictum. Nulla id quam nisl. Sed tellus enim, euismod sit amet nisl porta, fringilla pulvinar augue. In suscipit semper purus sit amet sodales. 
+		</p>
+		<p>
+			Maecenas venenatis augue eget commodo commodo. Nunc vulputate, diam sit amet ultricies sollicitudin, ligula nibh consequat tellus, vel congue augue sapien et dui. Duis accumsan lacus sit amet elementum dignissim. Pellentesque dignissim adipiscing ipsum sit amet dictum. Nulla id quam nisl. Sed tellus enim, euismod sit amet nisl porta, fringilla pulvinar augue. In suscipit semper purus sit amet sodales. 
+		</p>
+
+		<h2>Amrao ekdin tumader topke jabo</h2>
+		<p>
+			Sed luctus euismod eros a fermentum. Vivamus posuere nisi et arcu dapibus, ac adipiscing metus interdum. Aliquam convallis augue ipsum, vel condimentum eros sodales nec. Donec et dui sollicitudin, mattis sem vitae, luctus orci. Vestibulum diam lectus, hendrerit eget pharetra ut, accumsan sed lectus. Vestibulum tellus sem, posuere eget tempus ut, tempus vitae erat. Nullam feugiat elementum bibendum. 
+		</p>
+		<p>
+			In tincidunt gravida eleifend. Suspendisse placerat quis orci id vulputate. Sed elementum sed dui eget tempus. Proin accumsan lacus id tellus viverra tincidunt. Nullam ac diam sed magna tempor convallis eu a elit. Sed turpis ligula, vulputate quis tristique at, consequat non risus. Vivamus semper adipiscing arcu a dapibus. Pellentesque sit amet dui nunc. Nulla lorem massa, imperdiet vitae laoreet vitae, rhoncus ut nulla. Praesent nisl sapien, luctus ac erat a, mattis accumsan metus. Nulla bibendum, felis a venenatis tincidunt, leo nunc dictum metus, quis aliquam quam sem a velit. Donec vestibulum tincidunt magna, eu elementum est sodales eget. Sed imperdiet elit vel massa aliquet tincidunt ut sit amet sem. 
+		</p>
+
+		<p id="back-top">
+			<a href="#">Back To TOP</a>
+		</p>
+
+	</div>
+
+</body>
+</html>
